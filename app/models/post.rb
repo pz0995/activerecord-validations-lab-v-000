@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
 
 
   def clickbait
-    regex = /won\'t|believe|secret|top|guess/i\w+\n/g/
-    regex.match(title) =! nil
+    regex = /won\'t|believe|secret|top|guess/i/g
+    regex.match?(title) =! nil
   end
 end
